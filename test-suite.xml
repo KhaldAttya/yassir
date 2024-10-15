@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Yassir Automation Assignment">
+    <listeners>
+        <listener class-name="org.testng.reporters.JUnitXMLReporter" />
+        <listener class-name="org.testng.reporters.XMLReporter" />
+        <listener class-name="org.testng.reporters.EmailableReporter2" />
+    </listeners>
+    <test name="SauceDemo - Web">
+        <classes>
+            <class name="web.tests.OrderJourneyTest"/>
+            <class name="web.tests.LoginTest"/>
+        </classes>
+    </test>
+    <test name="WeatherTest - API">
+        <classes>
+            <class name="api.WeatherTest"/>
+        </classes>
+    </test>
+</suite>

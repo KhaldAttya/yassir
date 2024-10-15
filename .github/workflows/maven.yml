@@ -34,6 +34,6 @@ jobs:
     - name: Publish Test Results
       uses: test-summary/action@v2
       with:
-          paths: "test-output/**/TEST-*.xml"
+          paths: "test-output/TEST-*.xml"
       if: always()
 

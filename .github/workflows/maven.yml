@@ -31,9 +31,10 @@ jobs:
     - name: Run Test Automation
       run: mvn test -Dexecution=remote
 
-    - name: Upload TestNG Reports
-      uses: actions/upload-artifact@v3
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action/linux@v2
+      if: always()
       with:
-        name: testng-reports
-        path: test-output/*.xml
+        files: |
+          test-output/**/*.xml
 

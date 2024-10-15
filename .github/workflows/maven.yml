@@ -31,3 +31,9 @@ jobs:
     - name: Run Test Automation
       run: mvn test -Dexecution=remote
 
+    - name: Upload TestNG Reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: testng-reports
+        path: test-output/*.xml
+

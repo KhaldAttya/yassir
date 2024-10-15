@@ -50,6 +50,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.17</version>
                 <configuration>
+                    <properties>
+                        <execution>${execution}</execution>
+                    </properties>
                     <suiteXmlFiles>test-suite.xml</suiteXmlFiles>
                     <reportsDirectory>./test-output</reportsDirectory>
                     <skipTests>false</skipTests>

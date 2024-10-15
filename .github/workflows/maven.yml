@@ -29,5 +29,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Run Test Automation
-      run: mvn test
+      run: mvn test -Dexecution=remote
 
